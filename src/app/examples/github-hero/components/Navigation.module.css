@@ -1,0 +1,39 @@
+.navigation {
+  padding: 2rem 0;
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  gap: 2.875rem;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLink {
+  color: rgb(43, 38, 115);
+  font: 700 1.25rem Inter, sans-serif;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.navLink:hover,
+.navLink:focus {
+  text-decoration: underline;
+  outline: 0.125rem solid rgb(43, 38, 115);
+  outline-offset: 0.25rem;
+}
+
+@media (max-width: 61.9375rem) {
+  .navigation {
+    padding: 2rem 1.25rem 1rem;
+  }
+
+  .navList {
+    gap: 1.25rem;
+  }
+}

@@ -1,0 +1,32 @@
+.hero-container {
+  view-timeline-name: --hero-scroll;
+}
+.hero-text {
+  position: sticky;
+  top: 1rem;
+}
+.hero-image {
+  isolation: isolate;
+}
+
+@supports (animation-range: exit) {
+  @media (prefers-reduced-motion: no-preference) {
+    .hero-text {
+      animation: fade-out auto ease-in-out;
+      animation-timeline: --hero-scroll;
+      animation-range: exit 0% exit 100%;
+    }
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    scale: 1;
+  }
+
+  75% {
+    opacity: 0;
+    scale: 0.5;
+  }
+}

@@ -1,0 +1,35 @@
+@supports (animation-range: exit) {
+  @media (prefers-reduced-motion: no-preference) {
+    .hero-container {
+      view-timeline-name: --hero-scroll;
+    }
+
+    .hero-text {
+      animation: fade-out linear;
+      /* Connect the animation to the nearest scroller's scroll progress */
+      animation-timeline: --hero-scroll;
+      animation-range: exit 0% exit 100%;
+    }
+  }
+}
+
+.hero-text {
+  position: sticky;
+  top: 1rem;
+}
+
+.hero-image {
+  isolation: isolate;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    scale: 1;
+  }
+
+  100% {
+    opacity: 0;
+    scale: 0.25;
+  }
+}
