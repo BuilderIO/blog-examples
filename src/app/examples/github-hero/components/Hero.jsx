@@ -14,7 +14,7 @@ export const Hero = () => {
             Scroll-driven animations rock!
           </h1>
           <p className={styles.heroSubtitle} tabIndex={0}>
-            There's some nice CSS magic going on here. Isn't it?
+            There&apos;s some nice CSS magic going on here. Isn&apos;t it?
           </p>
         </div>
       </div>
