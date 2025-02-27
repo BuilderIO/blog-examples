@@ -42,7 +42,7 @@ export const Accordion = ({ entries }: { entries: AccordionEntry[] }) => {
         </div>
         <div className={styles.images}>
           <img
-            src="/accordion/00.jpg"
+            src="/accordion/00.webp"
             alt=""
             className={`${styles.image} ${styles.default}`}
             height="1000"
