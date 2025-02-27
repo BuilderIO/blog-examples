@@ -41,6 +41,13 @@ export const Accordion = ({ entries }: { entries: AccordionEntry[] }) => {
           ))}
         </div>
         <div className={styles.images}>
+          <img
+            src="/accordion/00.jpg"
+            alt=""
+            className={`${styles.image} ${styles.default}`}
+            height="1000"
+            width="1000"
+          />
           {entries.map((entry, index) => (
             <img
               key={index}

@@ -30,27 +30,38 @@
   }
 }
 
-.accordion:has(details:nth-child(1)[open]) img:nth-child(1) {
+.accordion:not(:has(details[open])) .default {
   opacity: 1;
   scale: 1;
   z-index: 1;
 }
-.accordion:has(details:nth-child(2)[open]) img:nth-child(2) {
+
+.accordion:has(details:nth-child(1)[open])
+  .image:nth-child(1 of :not(.default)) {
   opacity: 1;
   scale: 1;
   z-index: 1;
 }
-.accordion:has(details:nth-child(3)[open]) img:nth-child(3) {
+.accordion:has(details:nth-child(2)[open])
+  .image:nth-child(2 of :not(.default)) {
   opacity: 1;
   scale: 1;
   z-index: 1;
 }
-.accordion:has(details:nth-child(4)[open]) img:nth-child(4) {
+.accordion:has(details:nth-child(3)[open])
+  .image:nth-child(3 of :not(.default)) {
   opacity: 1;
   scale: 1;
   z-index: 1;
 }
-.accordion:has(details:nth-child(5)[open]) img:nth-child(5) {
+.accordion:has(details:nth-child(4)[open])
+  .image:nth-child(4 of :not(.default)) {
+  opacity: 1;
+  scale: 1;
+  z-index: 1;
+}
+.accordion:has(details:nth-child(5)[open])
+  .image:nth-child(5 of :not(.default)) {
   opacity: 1;
   scale: 1;
   z-index: 1;
@@ -96,7 +107,6 @@
 
 .details summary svg {
   opacity: 1;
-  transition: opacity 0.3s;
 }
 
 .details[open] summary svg {
