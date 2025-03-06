@@ -97,7 +97,6 @@
 
 .details::details-content {
   overflow: hidden;
-  background: red;
   height: 0;
   transition: height 0.3s, content-visibility 0.3s;
   transition-behavior: allow-discrete;
