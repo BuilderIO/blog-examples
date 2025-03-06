@@ -36,32 +36,11 @@
   z-index: 1;
 }
 
-.accordion:has(details:nth-child(1)[open])
-  .image:nth-child(1 of :not(.default)) {
-  opacity: 1;
-  scale: 1;
-  z-index: 1;
-}
-.accordion:has(details:nth-child(2)[open])
-  .image:nth-child(2 of :not(.default)) {
-  opacity: 1;
-  scale: 1;
-  z-index: 1;
-}
-.accordion:has(details:nth-child(3)[open])
-  .image:nth-child(3 of :not(.default)) {
-  opacity: 1;
-  scale: 1;
-  z-index: 1;
-}
-.accordion:has(details:nth-child(4)[open])
-  .image:nth-child(4 of :not(.default)) {
-  opacity: 1;
-  scale: 1;
-  z-index: 1;
-}
-.accordion:has(details:nth-child(5)[open])
-  .image:nth-child(5 of :not(.default)) {
+.accordion:has(details:nth-child(1)[open]) .image:nth-child(1),
+.accordion:has(details:nth-child(2)[open]) .image:nth-child(2),
+.accordion:has(details:nth-child(3)[open]) .image:nth-child(3),
+.accordion:has(details:nth-child(4)[open]) .image:nth-child(4),
+.accordion:has(details:nth-child(5)[open]) .image:nth-child(5) {
   opacity: 1;
   scale: 1;
   z-index: 1;
@@ -76,7 +55,7 @@
 }
 
 .details {
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .details + .details {
@@ -89,7 +68,6 @@
   padding: 1rem 0;
   font-size: 1.25rem;
   color: #bbb;
-  /* list-style: none; */
   display: flex;
   gap: 1rem;
   justify-content: space-between;
@@ -118,12 +96,14 @@
 }
 
 .details::details-content {
+  overflow: hidden;
+  background: red;
   height: 0;
   transition: height 0.3s, content-visibility 0.3s;
   transition-behavior: allow-discrete;
 }
 
-.details:open::details-content {
+.details[open]::details-content {
   height: auto;
 }
 

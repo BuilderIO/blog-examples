@@ -41,13 +41,6 @@ export const Accordion = ({ entries }: { entries: AccordionEntry[] }) => {
           ))}
         </div>
         <div className={styles.images}>
-          <img
-            src="/accordion/00.webp"
-            alt=""
-            className={`${styles.image} ${styles.default}`}
-            height="1000"
-            width="1000"
-          />
           {entries.map((entry, index) => (
             <img
               key={index}
@@ -58,6 +51,13 @@ export const Accordion = ({ entries }: { entries: AccordionEntry[] }) => {
               width="1000"
             />
           ))}
+          <img
+            src="/accordion/00.webp"
+            alt=""
+            className={`${styles.image} ${styles.default}`}
+            height="1000"
+            width="1000"
+          />
         </div>
       </div>
     </div>
